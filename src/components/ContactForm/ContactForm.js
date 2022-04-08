@@ -25,8 +25,6 @@ function ContactForm({ onFormSubmit, names }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const id = nanoid();
-    const name = e.target.name.value;
-    const number = e.target.number.value;
     if (names.includes(name)) {
       toast.error(`${name} is already in contacts!`);
       return;

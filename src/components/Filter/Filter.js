@@ -1,14 +1,10 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import s from "./Filter.module.css";
 
-function Filter({ handleFilter }) {
-  const [filter, setFilter] = useState("");
-
+function Filter({ filter, setFilter }) {
   const handleChange = (e) => {
     const value = e.target.value;
     setFilter(value);
-    handleFilter(value);
   };
 
   return (
@@ -27,7 +23,8 @@ function Filter({ handleFilter }) {
   );
 }
 Filter.propTypes = {
-  handleFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string,
+  setFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;

@@ -53,7 +53,7 @@ function App() {
       <Section>
         <Container>
           <h2>Contacts</h2>
-          <Filter handleFilter={setFilter} />
+          <Filter filter={filter} setFilter={setFilter} />
           <ContactList contacts={finalContacts} removeContact={removeContact} />
         </Container>
       </Section>
